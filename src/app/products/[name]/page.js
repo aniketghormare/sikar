@@ -149,7 +149,7 @@ const page = ({ params }) => {
                 <img src="/gridimg.png" />
               </div>
               <div className="contentdiv">
-                <p style={{ fontSize: "20px", fontWeight: "600" }}>Brand</p>
+                <p style={{ fontSize: "18px", fontWeight: "600" }}>Brand</p>
                 <p style={{ fontSize: "14px", fontWeight: "300" }}>
                   Sokia By ABCD
                 </p>

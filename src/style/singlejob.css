@@ -2,6 +2,23 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
+.statuscard {
+    background-color: #DEF1FF !important;
+    width: 100% !important;
+    text-align: center !important;
+    border-radius: 5px !important;
+    color: #4285F4 !important;
+    min-height: 30px !important;
+    display: flex !important;
+    justify-content: center !important;
+    font-size: 16px !important;
+}
+
+.statuscard:hover {
+    background-color: #4285F4 !important;
+    color: white !important;
+}
+
 .bigimgdiv {
     height: auto !important;
     width: 100% !important;
@@ -9,12 +26,21 @@
     margin-top: 65px !important;
 }
 
-.containerdiv {
+.descbox {
     width: 94% !important;
     height: auto !important;
     border: 1px solid white !important;
     margin: auto !important;
+    padding: 2px !important;
+}
+
+.containerdiv {
+    width: 92% !important;
+    height: auto !important;
+    border: 1px solid white !important;
+    margin: auto !important;
     margin-top: 20px !important;
+    margin: auto !important;
 }
 
 .text {
@@ -28,8 +54,9 @@
 
 .listdiv {
     height: auto !important;
-    width: 100% !important;
+    width: 96% !important;
     border: 1px solid white !important;
+    margin: auto !important;
 }
 
 .banner {
@@ -39,13 +66,11 @@
 
 .card {
     height: 200px !important;
-    width: 100% !important;
+    width: 96% !important;
     margin: auto !important;
     border-radius: 10px !important;
     margin-top: 15px !important;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px !important;
-    border: 3px solid white !important;
-   
+    border: 3px solid blue !important;
 }
 
 .card:hover {
@@ -54,7 +79,7 @@
 
 .cardupper {
     height: 70% !important;
-    border: 1px solid white ;
+    border: 1px solid white !important;
     margin: auto !important;
     width: 100% !important;
     border-radius: 10px 10px 0px 0px !important;
@@ -65,7 +90,7 @@
 
 .cardlower {
     height: 30% !important;
-    border: 1px solid white;
+    border: 1px solid white !important;
     margin: auto !important;
     width: 100% !important;
     border-radius: 0px 0px 10px 10px !important;
@@ -73,8 +98,8 @@
 }
 
 .upper1 {
-    width: 75% !important;
-    border: 1px solid white ;
+    width: 100% !important;
+    border: 1px solid white !important;
     height: 100% !important;
     border-radius: 10px 0px 0px 0px !important;
     display: flex !important;
@@ -83,18 +108,22 @@
 }
 
 .upper2 {
-    width: 25% !important;
-    border: 1px solid white ;
+    width: 100% !important;
+    border: 1px solid white !important;
     height: 100% !important;
     border-radius: 0px 10px 0px 0px !important;
-    text-align: right !important;
+    text-align: left !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-around !important;
 }
 
+.upper2 * {
+    margin-top: 4px !important;
+}
+
 .typo {
-    color: black !important;
+    color: #000 !important;
     font-family: Poppins !important;
     font-size: 25px !important;
     font-style: normal !important;
@@ -113,11 +142,12 @@
 
 .blue2 {
     width: 80% !important;
-    height: 100%;
-    align-items: center;
-    font-size: 16px;
-    padding: 1px;
-    color: var(--4285-f-4, #4285F4);
+    height: 100% !important;
+    align-items: center !important;
+    font-size: 16px !important;
+    padding: 1px !important;
+    border-color: white !important;
+    color: var(--4285-f-4, #4285F4) !important;
 }
 
 .typocompany {
@@ -140,7 +170,7 @@
 
 .pricetypo {
     color: #4285F4 !important;
-    text-align: right !important;
+    text-align: left !important;
     font-family: Poppins !important;
     font-size: 25px !important;
     font-style: normal !important;
@@ -171,69 +201,57 @@
     width: 100% !important;
     border: 1px solid white !important;
     display: flex !important;
-    justify-content: flex-end !important;
+    justify-content: flex-start !important;
     gap: 10px !important;
-    text-align: right !important;
 }
 
 @media (max-width: 700px) {
     .text {
         font-size: 24px !important;
     }
-
     .card {
         height: 185px !important;
-        border: 3px solid white !important;
     }
-
     .blue1 {
         width: 25% !important;
-        font-size: 9px !important;
+        font-size: 12px !important;
     }
-
     .blue2 {
         width: 75% !important;
-        font-size: 9px !important;
+        font-size: 12px !important;
     }
-
     .cardupper {
         padding: 3px !important;
     }
-
     .cardlower {
         padding: 3px !important;
     }
-
     .typo {
         font-size: 20px !important;
     }
-
     .pricetypo {
-        font-size: 13px !important;
+        font-size: 15px !important;
     }
-
     .typocompany {
         font-size: 16px !important;
     }
-
     .desctext {
         font-size: 18px !important;
     }
-
     .placetypo {
-        font-size: 11px !important;
+        font-size: 13px !important;
     }
-
     .emptypo {
-        font-size: 12px !important;
+        font-size: 13px !important;
     }
-
     .remotediv {
-        font-size: 12px !important;
+        font-size: 14px !important;
     }
-
     .bigimgdiv {
-        margin-top: 7px !important;
         margin-top: 65px !important;
     }
+    .statuscard {
+        font-size: 12px !important;
+    }
 }
+

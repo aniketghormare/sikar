@@ -1,5 +1,5 @@
 "use client";
-import "./singlejob.css";
+import "@/style/singlejob.css";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Box from "@mui/material/Box";
