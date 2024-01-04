@@ -8,8 +8,8 @@
     position: relative;
     /* top: 60px; */
     width: 100vw
-    /* height: auto; */
-    /* background-color: #F5F9FF; */
+        /* height: auto; */
+        /* background-color: #F5F9FF; */
 }
 
 #topbar {
@@ -17,6 +17,7 @@
     z-index: 99;
     width: 100vw
 }
+
 @media (min-width: 900px) {
     body {
         font-family: sans-serif;
@@ -27,7 +28,7 @@
         width: 83%;
         margin: auto;
         position: relative;
-         top: 8px; 
+        top: 8px;
     }
 
     .banner {
@@ -35,11 +36,3 @@
         width: 95vw;
     }
 }
-
-
-
-
-
-
-
-

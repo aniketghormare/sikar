@@ -1,6 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
 import "./job.css";
+import React, { useState, useEffect } from "react";
+
 import Image from "next/image";
 import Banner from "../../icons/tenderbanner.png";
 import { IconButton, Typography } from "@mui/material";
@@ -37,8 +38,9 @@ const page = () => {
   useEffect(() => {
     getjobdata(currentPage);
   }, [currentPage]);
+ 
   //console.log(jobdata);
-  console.log("hello2");
+  //console.log("hello2");
   return (
     <div
       id="mainContainer"
@@ -57,14 +59,14 @@ const page = () => {
         <p className="text">Jobs For You</p>
         <div className="listdiv">
           {/* backgroundColor={index%2==0? "#f1f7fc":"white"} */}
-          {jobdata.map((el, index) => {
+          {jobdata.length>0 && jobdata.map((el, index) => {
             return (
               <Link href={`/job/${el.id}`} key={el.id}>
                 <div
                   className="card"
                   style={{
-                    backgroundColor: index % 2 !== 0 ? "#f1f7fc" : "white",
-                    borderColor: index % 2 !== 0 ? "#f1f7fc" : "white",
+                    backgroundColor: index % 2 !== 0 ? "#f1f7fc" : "white" ,
+                    borderColor: index % 2 !== 0 ? "#f1f7fc" : "white" ,
                   }}
                 >
                   <div
