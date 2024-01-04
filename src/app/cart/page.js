@@ -459,6 +459,7 @@ function page() {
                             // }
                             console.log(cartdata[i]);
                             let obj = {
+                             // id:data.data.order_id,
                               orderId: data.data.order_id,
                               productId: cartdata[i].buyid,
                               quantity: cartdata[i].quantity,
@@ -513,6 +514,7 @@ function page() {
 
                             // rentitemQuantities
                             let obj2 = {
+                              //id:data.data.order_id,
                               orderId: data.data.order_id,
                               productId: rentcartdata[i].rentid,
                               quantity: rentcartdata[i].quantity,

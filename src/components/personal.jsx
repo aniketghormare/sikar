@@ -10,8 +10,10 @@ const PersonalInfo = () => {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const [snackbarSeverity, setSnackbarSeverity] = useState("success");
-  const [initdata,setinitdata]=useState({})
-  const [change,setchange]=useState(false)
+ // const [initdata, setinitdata] = useState({});
+  //const [initdata, setInitData] = useState(null);
+  const [initdata, setInitData] = useState({});
+  const [change, setchange] = useState(false);
   const [formData, setFormData] = useState({
     fullName: initdata.fullName || "",
     phoneNumber: initdata.phoneNumber || "",
@@ -22,9 +24,8 @@ const PersonalInfo = () => {
   });
   const [isEditable, setIsEditable] = useState(false);
 
-
-  const getdata=()=>{
-    console.log("hello")
+  const getdata = () => {
+    console.log("hello");
     const token = JSON.parse(localStorage.getItem("token"));
 
     if (token) {
@@ -38,19 +39,30 @@ const PersonalInfo = () => {
         .then((res) => res.json())
         .then((data) => {
           // Update the form data with fetched user information
-          setinitdata(data.data)
+          setInitData(data.data);
           setFormData(data.data);
-         // setFormData(data.data);
+          // setFormData(data.data);
         })
         .catch((err) => {
           console.error("Error fetching user info:", err);
         });
+    } else {
+      let data = {
+        fullName: "",
+        phoneNumber: "",
+        email: "",
+        gender: "",
+        dateOfBirth: "",
+        streetAddress: "",
+      };
+      setInitData(data);
+      setFormData(data);
     }
-  }
+  };
 
   useEffect(() => {
     // Check if the user is authenticated and fetch data if available
-    getdata()
+    getdata();
   }, [change]); // Empty dependency array ensures it runs only once when the component mounts
 
   const handleImgBox = () => {
@@ -100,8 +112,8 @@ const PersonalInfo = () => {
           setSnackbarMessage("Your Profile Updated!!");
           setSnackbarOpen(true);
           setFormData(updatedFormData);
-          setchange(!change)
-         // getdata()
+          setchange(!change);
+          // getdata()
         }
       })
       .catch((err) => {
@@ -295,4 +307,3 @@ const PersonalInfo = () => {
 };
 
 export default PersonalInfo;
-

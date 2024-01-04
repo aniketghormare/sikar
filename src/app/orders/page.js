@@ -27,13 +27,17 @@ function Page() {
       .then((data) => {
         console.log(data);
         setalldata(data);
-        let buydata = data.filter((item) => {
-          return item.orderCategory == "buy";
-        });
+        let buydata =
+          data.length > 0 &&
+          data.filter((item) => {
+            return item.orderCategory == "buy";
+          });
         setallbuy(buydata);
-        let rentdata = data.filter((item) => {
-          return item.orderCategory == "rent";
-        });
+        let rentdata =
+          data.length > 0 &&
+          data.filter((item) => {
+            return item.orderCategory == "rent";
+          });
         setallrent(rentdata);
       })
       .catch((err) => {

@@ -34,6 +34,7 @@ import Myorder from "./Myorder.jsx";
 import Security from "./security.jsx";
 import MuiAlert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
+import "@/style/personal.css"
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -108,12 +109,14 @@ export default function Topbar() {
       setSnackbarSeverity("success");
       setSnackbarMessage("Logout successfull!!");
       setSnackbarOpen(true);
+      setlogout(false)
       router.push("/");
     } else {
       //setIsDrawerOpen(false)
       setSnackbarSeverity("info");
       setSnackbarMessage("Login First!!");
       setSnackbarOpen(true);
+      setlogout(false)
     }
 
     // router.push("/");
